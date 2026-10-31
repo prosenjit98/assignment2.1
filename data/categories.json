@@ -1,0 +1,199 @@
+{
+  "domain": "Internal Employee Service Desk",
+  "description": "A single front door for employee requests. Every message is routed to the team that has to act on it: IT, Information Security, HR, Facilities or Finance.",
+  "categories": [
+    {
+      "name": "IT Support",
+      "routes_to": "IT Service Desk",
+      "description": "Problems with, or requests for, company technology that do not put data at risk: devices, business software, network connectivity, email and collaboration tools, system accounts and printers.",
+      "subcategories": [
+        {
+          "name": "Hardware",
+          "description": "Company laptops, desktops, monitors, docking stations, keyboards, mice, headsets and mobile phones: faults, damage, replacements and new equipment."
+        },
+        {
+          "name": "Software",
+          "description": "Installing, licensing, updating or fixing business applications other than email and Teams, including applications owned by other departments (such as the expense or HR system) when the application itself is malfunctioning."
+        },
+        {
+          "name": "Network",
+          "description": "Wi-Fi, wired network, VPN and internet connectivity, including slow or dropping connections."
+        },
+        {
+          "name": "Email & Collaboration",
+          "description": "Outlook, mailboxes, calendars, Microsoft Teams, SharePoint and OneDrive sync problems."
+        },
+        {
+          "name": "Accounts & Access",
+          "description": "Password resets, account lockouts, MFA setup, new system accounts and permission requests for applications, folders or shared drives."
+        },
+        {
+          "name": "Printing",
+          "description": "Printers, scanners and copiers: jams, toner, print queues and printer setup."
+        }
+      ]
+    },
+    {
+      "name": "Information Security",
+      "routes_to": "Security Operations",
+      "description": "Events that could put company data, accounts or systems at risk, and questions about security rules.",
+      "subcategories": [
+        {
+          "name": "Phishing & Suspicious Email",
+          "description": "Suspicious emails, messages or calls trying to obtain credentials, money or data, whether or not the employee interacted with them."
+        },
+        {
+          "name": "Malware & Virus",
+          "description": "Antivirus alerts, suspected viruses or ransomware, and unexpected software behaviour that suggests an infection."
+        },
+        {
+          "name": "Account Compromise",
+          "description": "Signs that someone else is using an account: credentials entered on a suspicious site, MFA prompts the employee did not trigger, unknown sign-ins, files changed or deleted by someone else."
+        },
+        {
+          "name": "Lost or Stolen Device",
+          "description": "Lost or stolen company laptops, phones, tablets or storage media."
+        },
+        {
+          "name": "Data Exposure",
+          "description": "Sensitive data sent to the wrong recipient, shared publicly or accessed without authorisation."
+        },
+        {
+          "name": "Security Policy Question",
+          "description": "Questions about security rules: approved tools, USB drives, password policy, data classification."
+        }
+      ]
+    },
+    {
+      "name": "HR",
+      "routes_to": "People Team",
+      "description": "Employment, pay, leave, benefits and workplace conduct.",
+      "subcategories": [
+        {
+          "name": "Payroll",
+          "description": "Salary, overtime, deductions, payslips, tax forms, and missing or incorrect pay."
+        },
+        {
+          "name": "Leave & Time Off",
+          "description": "Vacation balances, sick leave, parental leave and leave requests."
+        },
+        {
+          "name": "Benefits",
+          "description": "Health, dental, pension and other benefit plans, and enrolment."
+        },
+        {
+          "name": "Onboarding & Offboarding",
+          "description": "The employment process for joiners, movers and leavers: contracts, start dates, payroll records and the overall readiness of a new hire."
+        },
+        {
+          "name": "Employee Relations",
+          "description": "Harassment, discrimination, bullying, grievances and conflicts with colleagues or managers."
+        },
+        {
+          "name": "HR Policy & Documents",
+          "description": "HR policies and employment documents: employment verification letters, contract copies, handbook questions."
+        }
+      ]
+    },
+    {
+      "name": "Facilities",
+      "routes_to": "Workplace Services",
+      "description": "The physical workplace: buildings, physical access, maintenance, furniture, safety and office services.",
+      "subcategories": [
+        {
+          "name": "Building Access & Badges",
+          "description": "Access badges, door readers, building entry, parking gates and visitor access."
+        },
+        {
+          "name": "Maintenance & Repairs",
+          "description": "Heating, air conditioning, lighting, plumbing, leaks, broken doors and other building repairs."
+        },
+        {
+          "name": "Workspace & Furniture",
+          "description": "Desks, chairs, ergonomic equipment, desk moves and meeting room setup."
+        },
+        {
+          "name": "Health & Safety",
+          "description": "Fire, smoke, gas smells, electrical hazards, injuries, spills and anything else that could hurt someone."
+        },
+        {
+          "name": "Office Services",
+          "description": "Kitchens and coffee machines, cleaning, office supplies, mail and deliveries."
+        }
+      ]
+    },
+    {
+      "name": "Finance",
+      "routes_to": "Finance Operations",
+      "description": "Company money: expenses, purchasing, supplier payments and corporate cards.",
+      "subcategories": [
+        {
+          "name": "Expenses & Reimbursement",
+          "description": "Expense claims, reimbursement status and expense policy questions."
+        },
+        {
+          "name": "Purchase Orders",
+          "description": "Requests to raise, change or approve purchase orders and purchase requisitions."
+        },
+        {
+          "name": "Invoices & Vendor Payments",
+          "description": "Supplier invoices, payment status and vendor payment issues."
+        },
+        {
+          "name": "Corporate Card",
+          "description": "Company credit cards: declines, limits, lost cards and card statements."
+        }
+      ]
+    },
+    {
+      "name": "Unclassified",
+      "routes_to": "Service Desk triage (human)",
+      "description": "Use only when the message cannot be routed to any team above.",
+      "subcategories": [
+        {
+          "name": "Needs Clarification",
+          "description": "Too vague, incomplete or garbled to route; a follow-up question is needed."
+        },
+        {
+          "name": "Out of Scope",
+          "description": "Not a workplace service request: general knowledge, personal errands, chit-chat."
+        },
+        {
+          "name": "Non-Actionable",
+          "description": "Nothing to act on: thank-you notes, FYIs, auto-replies, spam."
+        }
+      ]
+    }
+  ],
+  "priorities": [
+    {
+      "level": "Critical",
+      "response_target": "15 minutes",
+      "description": "Immediate danger to people; a confirmed security compromise in progress (someone else using an account, credentials entered on a phishing site, spreading malware, sensitive data confirmed exposed outside the company); or an outage stopping many people, a whole team or site, or a business-critical system."
+    },
+    {
+      "level": "High",
+      "response_target": "4 business hours",
+      "description": "One person or a small group fully blocked with no workaround; a hard deadline within about 24 hours; or serious exposure such as a lost or stolen device, pay not received, a harassment or discrimination report, or a supplier threatening to stop service."
+    },
+    {
+      "level": "Medium",
+      "response_target": "1 business day",
+      "description": "Work is degraded or inconvenient but a workaround exists; standard requests needed within days; contained security events (a phishing email reported but not clicked, malware already quarantined)."
+    },
+    {
+      "level": "Low",
+      "response_target": "3 business days",
+      "description": "Questions, how-tos, information requests, cosmetic issues and requests with no near-term deadline."
+    }
+  ],
+  "disambiguation_rules": [
+    "Route to the team that must act to resolve the request. A malfunctioning application is IT Support / Software even when another department owns the process: the expense tool crashing is IT Support, a question about what can be expensed is Finance.",
+    "Anything that may put company data or accounts at risk is Information Security, even when hardware or access is involved: a lost laptop is Information Security / Lost or Stolen Device, not IT Support / Hardware.",
+    "Physical access (badges, doors, gates) is Facilities; access to systems, applications or files is IT Support / Accounts & Access.",
+    "Fire, smoke, gas, electrical hazards, injuries or other danger to people is always Facilities / Health & Safety at Critical priority, however casually it is described.",
+    "New joiners and leavers: use HR / Onboarding & Offboarding when the employment process is involved (contracts, start dates, payroll records), even if equipment or accounts are also missing, and list IT Support as a secondary category. Use IT Support alone when the request is only about equipment or accounts.",
+    "Computer peripherals (keyboards, mice, monitors, headsets) are IT Support / Hardware; furniture and ergonomics are Facilities / Workspace & Furniture; consumables and supplies are Facilities / Office Services.",
+    "If a message contains several requests, classify it by the most severe or urgent one and list the other teams in secondary_categories."
+  ]
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service Desk Classifier</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <h1>Service Desk Classifier</h1>
+      <p>Routes free-form employee requests to the right team with a priority, returned as structured JSON. Model: <code>{{ model or "not set" }}</code></p>
+    </div>
+  </header>
+
+  <main class="wrap grid">
+    <section class="panel">
+      <form id="classify-form">
+        <label for="text">Employee message</label>
+        <textarea id="text" name="text" rows="7" maxlength="5000"
+                  placeholder="e.g. My laptop is not connecting to the office Wi-Fi.">{{ initial_text }}</textarea>
+        <div class="form-row">
+          <span class="hint">Ctrl+Enter to classify &middot; <span id="char-count">0</span>/5000</span>
+          <button type="submit" id="submit">Classify</button>
+        </div>
+      </form>
+
+      <h2>Try an example</h2>
+      <ul class="examples">
+        {% for ex in examples %}
+        <li>
+          <button type="button" class="example" data-text="{{ ex.text }}">
+            <span class="tag tag-{{ ex.type }}">{{ ex.type }}</span>
+            <span class="example-text">{{ ex.text }}</span>
+          </button>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class="panel" aria-live="polite">
+      <div id="placeholder" class="placeholder">Enter a message or pick an example to see how it is classified.</div>
+      <div id="result" hidden></div>
+    </section>
+  </main>
+
+  <script id="initial-result" type="application/json">{{ initial | tojson }}</script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+[
+  {
+    "text": "Teams calls keep dropping every few minutes, but I can still ring people from my mobile.",
+    "category": "IT Support",
+    "subcategory": "Email & Collaboration",
+    "priority": "Medium",
+    "secondary_categories": [],
+    "why": "Teams is a collaboration tool; work is degraded but there is a workaround."
+  },
+  {
+    "text": "Someone claiming to be our CFO emailed asking me to buy gift cards urgently. I haven't replied.",
+    "category": "Information Security",
+    "subcategory": "Phishing & Suspicious Email",
+    "priority": "Medium",
+    "secondary_categories": [],
+    "why": "Classic impersonation scam; reported without interaction, so it is contained."
+  },
+  {
+    "text": "The car park gate reader is rejecting everyone's badge and there's a queue of cars out onto the road.",
+    "category": "Facilities",
+    "subcategory": "Building Access & Badges",
+    "priority": "Critical",
+    "secondary_categories": [],
+    "why": "Physical access failure blocking many people at once."
+  },
+  {
+    "text": "I need an employment verification letter for my mortgage application by next Friday.",
+    "category": "HR",
+    "subcategory": "HR Policy & Documents",
+    "priority": "Medium",
+    "secondary_categories": [],
+    "why": "Employment document with a deadline next week, not within 24 hours."
+  },
+  {
+    "text": "Please approve the PO for the six laptops for our new analysts, and IT will need to set them up before the 1st.",
+    "category": "Finance",
+    "subcategory": "Purchase Orders",
+    "priority": "Medium",
+    "secondary_categories": ["IT Support"],
+    "why": "The first action is a purchase order approval; IT setup follows, so IT is secondary."
+  },
+  {
+    "text": "Hi, quick follow-up on the thing we discussed?",
+    "category": "Unclassified",
+    "subcategory": "Needs Clarification",
+    "priority": "Low",
+    "secondary_categories": [],
+    "clarifying_question": "Could you remind us which request or ticket you are following up on?",
+    "why": "No team or problem can be identified from the text."
+  }
+]
